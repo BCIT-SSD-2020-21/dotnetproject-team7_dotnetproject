@@ -14,3 +14,24 @@
 .primary-btn {
   @include primary-btn;
 }
+
+.register-btn{
+  display: flex;
+  
+  .btn{
+    color: white;
+    background-color: $blue;
+    opacity: .5;
+  }
+}
+
+.iconme{
+  .icon-me{
+    margin: 0;
+    border: rebeccapurple;
+    border: solid;
+    border-radius: 50%;
+    padding: 2%;
+    
+  }
+}
