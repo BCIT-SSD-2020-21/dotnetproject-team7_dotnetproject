@@ -36,7 +36,7 @@ export default function NavBar() {
                         <div className="register-btn">
                             <button className="btn">Login / Register</button>
                         </div>
-                        <h3 className="icon-me"><BsFillPersonFill /></h3>
+                        <div className="icon-me"><BsFillPersonFill size={30} /></div>
                     </div>
                 </div>
             </div>
