@@ -37,11 +37,12 @@ Instruction for if you were to sign over the repo to an other development team, 
 
 -   Query _The Movie DB API_ as dynamic data source
 -   Review capability
--   Alter ratings / reviews
+-   Alter ratings / reviews / favourites
 
 ##### Frontend
 
 -   Review input form
+-   Add to favourites (heart button)
 
 ### Feature list
 
