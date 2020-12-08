@@ -114,9 +114,10 @@ li {
 
 .iconme .icon-me {
   margin: 0;
-  border: rebeccapurple;
-  border: solid;
+  border-style: solid;
   border-radius: 50%;
   padding: 2%;
+  border-color: rgba(0, 10, 255, 0.5);
+  color: rgba(0, 10, 255, 0.5);
 }
 /*# sourceMappingURL=main.css.map */
