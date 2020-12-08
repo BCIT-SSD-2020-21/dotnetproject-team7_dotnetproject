@@ -1,6 +1,8 @@
 @import "./partial/variables";
 @import "./partial/global";
+@import "./partial/breakpoints";
+@import "./partial/fonts";
 @import "./partial/mixins";
 
 // Header //
-@import "./partial/header";
+@import "./partial/navbar";

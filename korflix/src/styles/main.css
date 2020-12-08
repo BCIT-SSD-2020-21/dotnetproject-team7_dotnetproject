@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -16,5 +17,86 @@ a {
 
 li {
   list-style: none;
+}
+
+.header {
+  font-family: "Days One", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    font-family: "Days One", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.subheader {
+  color: rgba(50, 50, 50, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .subheader {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.primary-btn {
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(0, 10, 255, 0.5);
+  color: #fff;
+  border-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .primary-btn {
+    width: 130px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .primary-btn {
+    width: 188px;
+    height: 58px;
+  }
+}
+
+.primary-btn:hover,
+.primary-btn :active {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: rgba(0, 10, 255, 0.8);
 }
 /*# sourceMappingURL=main.css.map */
