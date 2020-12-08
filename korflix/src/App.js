@@ -1,8 +1,14 @@
+import React from "react";
+
+// Styles //
+import "./styles/main.css";
+
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>KORFLIX</h1>
+      <Header />
     </div>
   );
 }

@@ -1,0 +1,94 @@
+// Font //
+@mixin hero-header {
+  font-family: "Days One", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  @include tablet {
+    font-family: "Days One", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  @include desktop {
+    font-family: "Days One", sans-serif;
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+@mixin header {
+  font-family: "Days One", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  @include tablet {
+    font-family: "Days One", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@mixin subheader {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  @include tablet {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  @include tablet {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin btn-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+// Margin //
+@mixin offset {
+  margin: 0 16px;
+  @include tablet {
+    margin: 0 24px;
+  }
+  @include desktop {
+    margin: 0 180px;
+  }
+}
+
+// Button //
+@mixin primary-btn {
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: $blue-50;
+  color: $white;
+  border-style: none;
+  @include btn-text;
+  @include tablet {
+    width: 130px;
+    height: 40px;
+  }
+  @include desktop {
+    width: 188px;
+    height: 58px;
+  }
+  &:hover,
+  :active {
+    transition: background-color 0.5s ease;
+    background-color: rgba($blue, 0.8);
+  }
+}

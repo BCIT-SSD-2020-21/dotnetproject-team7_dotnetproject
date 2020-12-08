@@ -1,0 +1,16 @@
+.header {
+  @include header;
+}
+
+.subheader {
+  color: $black-60;
+  @include subheader;
+}
+
+.text {
+  @include text;
+}
+
+.primary-btn {
+  @include primary-btn;
+}
