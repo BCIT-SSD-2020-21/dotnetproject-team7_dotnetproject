@@ -14,6 +14,7 @@ export default function NavBar() {
                             src="./img/logo.png"
                             alt="korflix"
                             width="200px"
+                            height="50px"
                         />
 
                     </a>
