@@ -5,8 +5,15 @@
 /.pnp
 .pnp.js
 
+# env
+.env
+
 # css.map
 *.css.map
+
+# eslintcache
+.eslintcache
+
 # testing
 /coverage
 
