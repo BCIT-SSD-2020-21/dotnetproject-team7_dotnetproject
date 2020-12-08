@@ -67,4 +67,4 @@ A prototype (or prototypes) that mock out the layout and flow of each of your ap
 
 ### ERD
 
-![](https://i.imgur.com/yOLxHAs.png)
+![](https://i.imgur.com/gzF192B.png)
