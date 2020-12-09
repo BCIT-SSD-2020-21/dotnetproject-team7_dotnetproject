@@ -2,9 +2,11 @@
   height: 50vh;
   object-fit: contain;
   display: flex;
+  @include padding-offset;
   &__contents {
+    position: relative;
     background-color: $black-60;
-    height: 190px;
+    width: 100%;
     padding: 2rem 1rem;
     border-radius: 10px;
     margin: 2rem 1rem;
@@ -18,5 +20,29 @@
     @include text;
     color: $offwhite;
     margin-top: 2rem;
+    max-width: 768px;
+  }
+}
+
+.icon-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 10px;
+  &__icons {
+    margin-left: 1rem;
+  }
+  &__star {
+    color: $yellow;
+  }
+  &__heart {
+    color: $red;
+  }
+  &__play {
+    color: $white;
+    margin-right: 1rem;
   }
 }

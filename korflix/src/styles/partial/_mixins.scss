@@ -72,6 +72,16 @@
   }
 }
 
+@mixin padding-offset {
+  padding: 0 16px;
+  @include tablet {
+    padding: 0 24px;
+  }
+  @include desktop {
+    padding: 0 180px;
+  }
+}
+
 // Button //
 @mixin primary-btn {
   width: 230px;
