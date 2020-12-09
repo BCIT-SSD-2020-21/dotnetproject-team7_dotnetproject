@@ -1,0 +1,22 @@
+.banner {
+  height: 50vh;
+  object-fit: contain;
+  display: flex;
+  &__contents {
+    background-color: $black-60;
+    height: 190px;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    margin: 2rem 1rem;
+  }
+  &__title {
+    @include hero-header;
+    font-size: 32px;
+    color: $white;
+  }
+  &__desc {
+    @include text;
+    color: $offwhite;
+    margin-top: 2rem;
+  }
+}

@@ -38,6 +38,8 @@ export default function Banner() {
                         {movie?.title || movie?.name || movie?.original_name}
                     </h1>
                 <h2 className="banner__desc">{truncate(movie.overview,150)}</h2>
+            
+                    
                 </div>
         </header>
     )
