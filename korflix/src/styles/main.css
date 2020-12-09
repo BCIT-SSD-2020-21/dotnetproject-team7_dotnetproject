@@ -132,4 +132,9 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.banner__contents {
+  opacity: .5;
+  background-color: black;
+}
 /*# sourceMappingURL=main.css.map */
