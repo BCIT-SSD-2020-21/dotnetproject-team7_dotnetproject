@@ -19,6 +19,8 @@ export default function Banner() {
         fetchData()
     },[])
 
+    
+
     console.log(movie);
 
     return (
