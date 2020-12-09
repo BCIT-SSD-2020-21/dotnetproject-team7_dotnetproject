@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "../axios";
 import requests from "../requests";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,29 +7,30 @@ import { faStar, faPlay, faHeart } from '@fortawesome/free-solid-svg-icons'
 export default function Banner() {
     const [movie, setMovie] = useState([]);
 
-    useEffect(()=>{
-        async function fetchData(){
+    useEffect(() => {
+        async function fetchData() {
             const request = await axios.get(requests.koreanDrama);
             console.log(request.data.results)
             setMovie(
-            request.data.results[
+                request.data.results[
                 Math.floor(Math.random() * request.data.results.length)
-            ]
-        );
-        return request;
+                ]
+            );
+            return request;
         }
         fetchData()
-    },[])
+    }, [])
+
 
     // Truncate function => takes in str and n params, and put "..." at the end when str exceed n of words.
-    function truncate(str, n){
+    function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
 
     // console.log(movie);
 
     return (
-        <header className="banner" 
+        <header className="banner"
             style={{
                 backgroundSize: "cover",
                 backgroundImage: `url(http://image.tmdb.org/t/p/original/${movie?.backdrop_path || movie?.poster_path}`,

@@ -133,6 +133,7 @@ li {
      object-fit: cover;
 }
 
+
 .banner {
   height: 50vh;
   -o-object-fit: contain;
@@ -239,5 +240,6 @@ li {
 .icon-menu__play {
   color: #fff;
   margin-right: 1rem;
+
 }
 /*# sourceMappingURL=main.css.map */
