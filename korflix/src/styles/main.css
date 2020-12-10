@@ -240,4 +240,10 @@ li {
   color: #fff;
   margin-right: 1rem;
 }
+
+.movie-pic .row {
+  overflow-x: auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 /*# sourceMappingURL=main.css.map */
