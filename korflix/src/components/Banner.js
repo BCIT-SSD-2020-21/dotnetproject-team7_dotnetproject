@@ -9,11 +9,13 @@ export default function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.koreanDrama);
-            console.log(request.data.results)
+            const request = await axios.get(requests.allMovies);
+            const results = request.data.movies;
+
+            console.log(results)
             setMovie(
-                request.data.results[
-                Math.floor(Math.random() * request.data.results.length)
+                results[
+                Math.floor(Math.random() * results.length)
                 ]
             );
             return request;
@@ -27,7 +29,7 @@ export default function Banner() {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
 
-    // console.log(movie);
+    // console.log(movie.id);
 
     return (
         <header className="banner"
@@ -54,6 +56,7 @@ export default function Banner() {
                         <FontAwesomeIcon className="icon-menu__play" icon={faPlay}/>
                         <FontAwesomeIcon className="icon-menu__heart" icon={faHeart}/>
                      </div>
+                     
                 </div>   
                 </div>
         </header>
