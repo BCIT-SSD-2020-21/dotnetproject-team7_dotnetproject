@@ -5,3 +5,13 @@
         
     }
 }
+
+.image-container{
+    position: relative;
+    transition: transform 0.2s;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+}
