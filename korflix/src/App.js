@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import requests from "./requests";
 
 // Styles //
@@ -10,16 +12,20 @@ import MovieList from "./components/MovieList";
 
 
 
+import Login from "./components/Login";
 
 function App() {
 
   return (
-    <div className="App">
-      <Header />
-
-      <Row />
-      {/* <Row title="Trending" fetchUrl={requests.koreanDrama}/> */}
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Row />
+        <Switch>
+          <Route path="/login" component={Login} />
+        </Switch>
+      </div>
+    </Router>
   );
 
 }
