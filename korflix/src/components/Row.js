@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MovieList from './MovieList';
+import MovieListHeading from './MovieListHeading';
 
 
 const Row = () => {
@@ -27,7 +28,7 @@ const Row = () => {
 
         <div className="container-fluid movie-pic">
             <div className='row'>
-
+                <MovieListHeading heading="Movies" />
             </div>
             <div className='row'>
                 <MovieList movies={movies} />
