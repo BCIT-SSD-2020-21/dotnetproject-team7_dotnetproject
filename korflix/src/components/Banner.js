@@ -10,12 +10,12 @@ export default function Banner() {
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(requests.allMovies);
-            const results = request.data.movies;
-
-            console.log(results)
+            const movies = request.data.slice(0,20)
+            // console.log(request.data.slice(0,12))
             setMovie(
-                results[
-                Math.floor(Math.random() * results.length)
+                movies[
+                    // randomize movie picture
+                    Math.floor(Math.random() * movies.length)
                 ]
             );
             return request;
@@ -29,7 +29,6 @@ export default function Banner() {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
 
-    // console.log(movie.id);
 
     return (
         <header className="banner"

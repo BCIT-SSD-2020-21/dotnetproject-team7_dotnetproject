@@ -15,10 +15,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
-        <Row />
+
         <Switch>
-          <Route path="/login" component={Login} />
+          <Route component={Header} exact />
+          <Route component={Row} />
+          <Route path="/login" component={Login} exact />
         </Switch>
       </div>
     </Router>

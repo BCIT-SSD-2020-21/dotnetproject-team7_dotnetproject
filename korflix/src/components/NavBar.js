@@ -1,5 +1,6 @@
 import React from 'react'
-// import { FaSearch } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import { FaSearch } from 'react-icons/fa';
 import { BsFillPersonFill } from 'react-icons/bs';
 
 export default function NavBar() {
@@ -34,7 +35,9 @@ export default function NavBar() {
                 <div className="widget-wrap col-lg-3 col-md-4">
                     <div className="row justify-content-between align-items-center py-3 mx-0 iconme">
                         <div className="register-btn">
-                            <button className="btn">Login / Register</button>
+                            <Link to="/login">
+                                <button className="btn">Login / Register</button>
+                            </Link>
                         </div>
                         <div className="icon-me"><BsFillPersonFill size={30} /></div>
                     </div>
@@ -44,8 +47,3 @@ export default function NavBar() {
 
     )
 }
-// {/* <h1 className="header">This is nav</h1>
-//             <h2 className="subheader">This is subheader!</h2>
-//             <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-//             </p>
-//             <button className="primary-btn">My profile</button> */}
