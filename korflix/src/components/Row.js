@@ -10,14 +10,18 @@ const Row = () => {
         const response = await fetch(url);
         const responseJson = await response.json();
 
-        console.log(responseJson);
-        setMovies(responseJson.Search);
+        console.log(responseJson.results); //------ working 
+
+
+        setMovies(responseJson.results);
+
+        return responseJson;
     };
 
     useEffect(() => {
         getMovieRequest();
     }, []);
-
+    console.log(movies);
     return (
 
         <div className="container-fluid movie-pic">
