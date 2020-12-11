@@ -10,7 +10,10 @@ import Row from "./components/Row";
 
 import Login from "./components/Login";
 
+
+
 function App() {
+
 
   return (
     <Router>
@@ -18,9 +21,10 @@ function App() {
 
         <Switch>
           <Route component={Header} exact />
-          <Route component={Row} />
           <Route path="/login" component={Login} exact />
         </Switch>
+        <Route component={Row} />
+
       </div>
     </Router>
   );
