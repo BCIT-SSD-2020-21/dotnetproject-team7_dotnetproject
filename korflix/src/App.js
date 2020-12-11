@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import requests from "./requests";
+
 
 // Styles //
 import "./styles/main.css";
@@ -13,10 +13,11 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Header />
-      <Row  />
+      
       <Switch>
-        <Route path="/login" component={Login}/>
+        <Route component={Header} exact/>
+        <Route  component={Row}/>
+        <Route path="/login" component={Login} exact/>
       </Switch>
     </div>
     </Router>
