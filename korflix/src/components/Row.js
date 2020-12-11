@@ -38,7 +38,14 @@ const Row = () => {
             <div className='row'>
                 <MovieList movies={movies} />
             </div>
+            <div className='row'>
+                <MovieListHeading heading="Trending" />
+            </div>
+            <div className='row'>
+                <MovieList movies={movies} />
+            </div>
         </div>
+
 
 
     )
