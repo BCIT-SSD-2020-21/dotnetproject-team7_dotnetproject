@@ -1,6 +1,5 @@
-
 .banner {
-  height: 50vh;
+  height: 75vh;
   object-fit: contain;
   display: flex;
   @include padding-offset;
@@ -47,4 +46,3 @@
     margin-right: 1rem;
   }
 }
-
