@@ -246,4 +246,35 @@ li {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
+
+.image-container {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: .5;
+}
+
+.image-container .overlay {
+  position: absolute;
+  background: #323232;
+  width: 100%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

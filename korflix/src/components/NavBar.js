@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaSearch } from 'react-icons/fa';
 import { BsFillPersonFill } from 'react-icons/bs';
 
-export default function NavBar() {
+export default function NavBar(props) {
     return (
 
         <div className="container">
