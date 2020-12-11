@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import requests from "./requests";
+
 
 // Styles //
 import "./styles/main.css";
 
 import Header from "./components/Header";
 import Row from "./components/Row";
-import MovieList from "./components/MovieList";
-
-
 
 import Login from "./components/Login";
 
