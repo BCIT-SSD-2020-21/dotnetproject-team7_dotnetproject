@@ -5,27 +5,26 @@ import SearchForm from './SearchForm';
 
 
 const Row = () => {
-    const [movies, setMovies] = useState([]);
-    const [searchString, setSearchString] = useState('');
+    // const [movies, setMovies] = useState([]);
+    // const [searchString, setSearchString] = useState('');
 
-    const getMovieRequest = async (searchString) => {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=59ff1e5e8dcca98569ad357b9d91a30b&query=${searchString}`
-        const response = await fetch(url);
-        const responseJson = await response.json();
+    // const getMovieRequest = async (searchString) => {
+    //     const url = `https://korflixapi.azurewebsites.net/movie?search=${searchString}`
+    //     const response = await fetch(url);
+    //     const responseJson = await response.json();
 
-        //console.log(responseJson.results); //------ working 
+    //     console.log(responseJson.slice(0, 20)); //------ working 
 
+    //     if (responseJson.slice(0, 20)) {
+    //         setMovies(responseJson.slice(0, 20));
+    //     }
 
-        if (responseJson.results) {
-            setMovies(responseJson.results);
-        }
+    //     return responseJson;
+    // };
 
-        return responseJson;
-    };
-
-    useEffect(() => {
-        getMovieRequest(searchString);
-    }, [searchString]);
+    // useEffect(() => {
+    //     getMovieRequest(searchString);
+    // }, [searchString]);
 
     //console.log(movies);
     return (
@@ -33,9 +32,9 @@ const Row = () => {
         <div className="container-fluid movie-pic">
             <div className='row'>
                 <MovieListHeading heading="Movies" />
-                <SearchForm searchString={searchString} setSearchString={setSearchString} />
+                {/* <SearchForm searchString={searchString} setSearchString={setSearchString} /> */}
             </div>
-            <div className='row'>
+            {/* <div className='row'>
                 <MovieList movies={movies} />
             </div>
             <div className='row'>
@@ -44,10 +43,7 @@ const Row = () => {
             <div className='row'>
                 <MovieList movies={movies} />
             </div>
-        </div>
-
-
-
+        */} </div>
     )
 }
 
