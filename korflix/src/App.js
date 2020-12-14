@@ -44,7 +44,11 @@ function App() {
           <Route exact path="/">
             <Header searchString={searchString} setSearchString={setSearchString} />
             {/* <Row /> */}
-            <MovieList movies={movies} />
+            <div className="conatiner-fluid movie-pic">
+              <div className="row">
+                <MovieList movies={movies} />
+              </div>
+            </div>
           </Route>
           <Route exact path="/login">
             <Login />
