@@ -3,10 +3,10 @@ import NavBar from "./NavBar";
 import Banner from "./Banner";
 
 
-export default function Header() {
+export default function Header({ searchString, setSearchString }) {
     return (
         <div>
-            <NavBar />
+            <NavBar searchString={searchString} setSearchString={setSearchString} />
             <Banner />
         </div>
     )

@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { FaSearch } from 'react-icons/fa';
 import { BsFillPersonFill } from 'react-icons/bs';
+import SearchForm from './SearchForm';
 
-export default function NavBar(props) {
+export default function NavBar({ searchString, setSearchString }) {
     return (
 
         <div className="container">
@@ -20,7 +21,7 @@ export default function NavBar(props) {
                     </a>
                 </div>
                 <div className="searchBar col-md-4 col-sm-12">
-                    {/* <SearchForm searchResults={searchResults} setSearchResults={setSearchResults} /> */}
+                    <SearchForm searchString={searchString} setSearchString={setSearchString} />
                     {/* <form>
                         <div className="input-group">
                             <input type="text" className="form-control" placeholder="Search" />
