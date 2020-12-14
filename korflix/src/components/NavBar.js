@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
-import { FaSearch } from 'react-icons/fa';
+
 import { BsFillPersonFill } from 'react-icons/bs';
 import SearchForm from './SearchForm';
 
@@ -22,16 +22,6 @@ export default function NavBar({ searchString, setSearchString }) {
                 </div>
                 <div className="searchBar col-md-4 col-sm-12">
                     <SearchForm searchString={searchString} setSearchString={setSearchString} />
-                    {/* <form>
-                        <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Search" />
-                            <div className="input-group-append">
-                                <button className="btn btn-dark" type="submit">
-                                    <FaSearch />
-                                </button>
-                            </div>
-                        </div>
-                    </form> */}
                 </div>
                 <div className="widget-wrap col-lg-3 col-md-4">
                     <div className="row justify-content-between align-items-center py-3 mx-0 iconme">

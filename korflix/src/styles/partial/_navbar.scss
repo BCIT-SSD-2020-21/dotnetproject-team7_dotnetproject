@@ -20,8 +20,15 @@
   
   .btn{
     color: white;
-    background-color: $blue;
-    opacity: .5;
+    background-color: $deepblue;
+    opacity: 1;
+    &:hover{
+      color: $deepblue;
+      background-color: $white;
+      border-color: $deepblue;
+      border-style: solid;
+      border-width: 2px;
+    }
   }
 }
 
@@ -34,7 +41,12 @@
     height: 40px;
     border-style: solid;
     border-radius: 50%;
-    border-color: $blue-50;
-    color: $blue-50;
+    border-color: $deepblue;
+    color: $white;
     object-fit: cover;
+    background-color: $deepblue;
+    &:hover{
+      color: $deepblue;
+      background-color: white;
+    }
   }
