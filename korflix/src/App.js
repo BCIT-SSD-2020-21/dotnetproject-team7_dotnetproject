@@ -23,13 +23,18 @@ function App() {
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    // console.log(responseJson.slice(0, 20)); //------ working 
+    const filteredResponse = responseJson.filter((m)=>{
+      return m.backdrop_path != null && m.poster_path != null;
+    })
 
-    if (responseJson.slice(0, 20)) {
-      setMovies(responseJson.slice(0, 20));
+    
+    // console.log(filteredResponse); //------ working 
+
+    if (filteredResponse) {
+      setMovies(filteredResponse);
     }
 
-    return responseJson;
+    return filteredResponse;
   };
 
   useEffect(() => {

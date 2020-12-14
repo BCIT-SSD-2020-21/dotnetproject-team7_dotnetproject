@@ -1,27 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import axios from "../axios";
-import requests from "../requests";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faPlay, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-export default function Banner() {
-    const [movie, setMovie] = useState([]);
+export default function Banner(movie) {
+    const movieResult = movie.movie;
+    
+    const [oneMovie, setOneMovie] = useState([]);
 
-    useEffect(() => {
-        async function fetchData() {
-            const request = await axios.get(requests.allMovies);
-            const movies = request.data
-            console.log(request.data)
-            setMovie(
-                movies[
-                    // randomize movie picture
-                    Math.floor(Math.random() * movies.length)
-                ]
-            );
-            return request;
-        }
-        fetchData()
-    }, [])
+    console.log(movieResult)
+
+    useEffect(()=>{
+
+       
+    })
+    
 
 
     // Truncate function => takes in str and n params, and put "..." at the end when str exceed n of words.
@@ -34,14 +26,14 @@ export default function Banner() {
         <header className="banner"
             style={{
                 backgroundSize: "cover",
-                backgroundImage: `url(http://image.tmdb.org/t/p/original/${movie?.backdrop_path || movie?.poster_path}`,
+                backgroundImage: `url(http://image.tmdb.org/t/p/original/${movieResult?.backdrop_path || movieResult?.poster_path}`,
                 backgroundPosition: "center center",
             }}>
             <div className="banner__contents">
                 <h1 className="banner__title">
-                    {movie?.title || movie?.name || movie?.original_name}
+                    {movieResult?.title || movieResult?.name || movieResult?.original_name}
                 </h1>
-                <h2 className="banner__desc">{truncate(movie.overview, 200)}</h2>
+                <h2 className="banner__desc">{truncate(movieResult.overview, 200)}</h2>
                 <div className="icon-menu">
                     <div className="icon-memu__stars">
                         <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
