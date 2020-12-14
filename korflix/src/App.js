@@ -23,7 +23,7 @@ function App() {
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    console.log(responseJson.slice(0, 20)); //------ working 
+    // console.log(responseJson.slice(0, 20)); //------ working 
 
     if (responseJson.slice(0, 20)) {
       setMovies(responseJson.slice(0, 20));
@@ -42,7 +42,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Header searchString={searchString} setSearchString={setSearchString} />
+            <Header searchString={searchString} setSearchString={setSearchString} movies={movies}/>
             {/* <Row /> */}
             <div className="conatiner-fluid movie-pic">
               <div className="row">

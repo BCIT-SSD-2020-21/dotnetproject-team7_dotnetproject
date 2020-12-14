@@ -10,8 +10,8 @@ export default function Banner() {
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(requests.allMovies);
-            const movies = request.data.slice(0,20)
-            // console.log(request.data.slice(0,12))
+            const movies = request.data
+            console.log(request.data)
             setMovie(
                 movies[
                     // randomize movie picture
