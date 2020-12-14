@@ -108,8 +108,16 @@ li {
 
 .register-btn .btn {
   color: white;
-  background-color: #000aff;
-  opacity: .5;
+  background-color: #02487a;
+  opacity: 1;
+}
+
+.register-btn .btn:hover {
+  color: #02487a;
+  background-color: #fff;
+  border-color: #02487a;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .icon-me {
@@ -127,10 +135,16 @@ li {
   height: 40px;
   border-style: solid;
   border-radius: 50%;
-  border-color: rgba(0, 10, 255, 0.5);
-  color: rgba(0, 10, 255, 0.5);
+  border-color: #02487a;
+  color: #fff;
   -o-object-fit: cover;
      object-fit: cover;
+  background-color: #02487a;
+}
+
+.icon-me:hover {
+  color: #02487a;
+  background-color: white;
 }
 
 .banner {
