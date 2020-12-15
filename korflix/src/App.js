@@ -23,11 +23,11 @@ function App() {
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    const filteredResponse = responseJson.filter((m)=>{
+    const filteredResponse = responseJson.filter((m) => {
       return m.backdrop_path != null && m.poster_path != null;
     })
 
-    
+
     // console.log(filteredResponse); //------ working 
 
     if (filteredResponse) {
@@ -47,7 +47,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Header searchString={searchString} setSearchString={setSearchString} movies={movies}/>
+            <Header searchString={searchString} setSearchString={setSearchString} movies={movies} />
             {/* <Row /> */}
             <div className="conatiner-fluid movie-pic">
               <div className="row">
