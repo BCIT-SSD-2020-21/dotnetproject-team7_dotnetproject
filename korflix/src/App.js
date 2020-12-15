@@ -37,6 +37,8 @@ function App() {
     return filteredResponse;
   };
 
+  console.log(movies);
+
   useEffect(() => {
     getMovieRequest(searchString);
   }, [searchString]);
