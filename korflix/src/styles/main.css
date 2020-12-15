@@ -147,6 +147,14 @@ li {
   background-color: white;
 }
 
+.input-group .form-control {
+  border-color: #02487a;
+  border-radius: 8px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  text-align: center;
+}
+
 .banner {
   height: 75vh;
   -o-object-fit: contain;
@@ -259,6 +267,8 @@ li {
   overflow-x: auto;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .image-container {
@@ -276,12 +286,19 @@ li {
 }
 
 .image-container:hover .overlay {
-  opacity: .5;
+  opacity: 1;
+}
+
+.image-container:hover h6 {
+  color: white;
+  opacity: 1;
+  padding: 0%;
+  margin: 0%;
 }
 
 .image-container .overlay {
   position: absolute;
-  background: #323232;
+  background: #02487a;
   width: 100%;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;

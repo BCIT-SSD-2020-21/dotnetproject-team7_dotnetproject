@@ -11,7 +11,7 @@ import Row from "./components/Row";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import MovieList from "./components/MovieList";
-
+import MovieListHeading from "./components/MovieListHeading";
 
 
 function App() {
@@ -26,9 +26,6 @@ function App() {
     const filteredResponse = responseJson.filter((m) => {
       return m.backdrop_path != null && m.poster_path != null;
     })
-
-
-    // console.log(filteredResponse); //------ working 
 
     if (filteredResponse) {
       setMovies(filteredResponse);
@@ -51,7 +48,11 @@ function App() {
             {/* <Row /> */}
             <div className="conatiner-fluid movie-pic">
               <div className="row">
+                <MovieListHeading heading="Movies" />
+              </div>
+              <div className="row">
                 <MovieList movies={movies} />
+
               </div>
             </div>
           </Route>
@@ -63,7 +64,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </Router >
   );
 
 }

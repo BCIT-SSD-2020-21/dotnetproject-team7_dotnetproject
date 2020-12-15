@@ -2,6 +2,8 @@
     .row{
         overflow-x: auto;
         flex-wrap: nowrap;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 }
 
@@ -13,14 +15,21 @@
             cursor: pointer;
             transform: scale(1.1);
             .overlay{
-                opacity: .5;
+                opacity: 1;
+               
+            }
+            h6{
+                color: white;
+                opacity: 1;
+                padding: 0%;
+                margin: 0%;
             }
         }
       
     
         .overlay{
     position: absolute;
-    background: $black;
+    background: $deepblue;
     width: 100%;
     transition: 0.5s ease;
     opacity: 0;
