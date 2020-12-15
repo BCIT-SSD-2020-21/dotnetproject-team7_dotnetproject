@@ -4,28 +4,16 @@ import requests from "../requests";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faPlay, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-export default function Banner() {
-    const [movie, setMovie] = useState([]);
+export default function Banner({movies}) {
 
-  
-
-    useEffect(()=>{
-        async function fetchData(){
-            const request = await axios.get(requests.allMovies);
-            const data = request.data.results;
-            console.log(data);
-            setMovie(
-                // request.data.results[
-                //     // randomize movie picture
-                //     Math.floor(Math.random() * request.data.results.length)
-                // ]
-            );
-            
+    useEffect(() => {
+        async function getData(){
+            await 
         }
-        fetchData()
-    },[])
-
-    console.log(movie);
+        return () => {
+            cleanup
+        }
+    }, [input])
 
 
 
