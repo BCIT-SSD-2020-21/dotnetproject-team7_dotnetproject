@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 // Styles //
 import "./styles/main.css";
 
 import Header from "./components/Header";
-import Row from "./components/Row";
 
 import Login from "./components/Login";
 import Register from "./components/Register";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
+import MovieDetail from "./components/MovieDetail";
 
-
+// Display movies & Search filter function //
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchString, setSearchString] = useState('');
@@ -43,19 +43,19 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          {/* Display Movies */}
           <Route exact path="/">
             <Header searchString={searchString} setSearchString={setSearchString} movies={movies} />
-            {/* <Row /> */}
             <div className="conatiner-fluid movie-pic">
               <div className="row">
                 <MovieListHeading heading="Movies" />
               </div>
               <div className="row">
                 <MovieList movies={movies} />
-
               </div>
+              <Route path="/movie/:id" component={MovieDetail} />
             </div>
-          </Route>
+          </Route> {/* Display Movies End*/}
           <Route exact path="/login">
             <Login />
           </Route>

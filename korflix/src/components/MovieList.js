@@ -1,4 +1,5 @@
 import React from 'react';
+import ClickMovie from './ClickMovie';
 
 const base_url = "http://image.tmdb.org/t/p/original/";
 
@@ -12,6 +13,7 @@ const MovieList = (props) => {
                 <div className="overlay d-flex align-items-center justify-content-center">
                     <h6>{movie.name}</h6>
                 </div>
+                <ClickMovie />
 
 
             </div>)
