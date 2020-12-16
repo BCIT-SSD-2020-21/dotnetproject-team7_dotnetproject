@@ -50,3 +50,13 @@
       background-color: white;
     }
   }
+
+.input-group{
+  .form-control{
+  
+    border-color: $deepblue;
+  border-radius: 8px;
+  transition: 0.4s ease-out;
+  text-align: center;
+  }
+}
