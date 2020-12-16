@@ -56,7 +56,7 @@ function App() {
                 <MovieList movies={movies} />
               </div>
             </div>
-            <Route exact path="/movies/:id" >
+            <Route path="/movies/:id" >
               <MovieDetail />
             </Route>
           </Route> {/* Display Movies End*/}
