@@ -31,7 +31,7 @@ function App() {
     // console.log(filteredResponse); //------ working 
 
     if (filteredResponse) {
-      setMovies(filteredResponse);
+        setMovies(filteredResponse);
     }
 
     return filteredResponse;
