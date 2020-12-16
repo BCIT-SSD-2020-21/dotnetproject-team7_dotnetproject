@@ -7,7 +7,7 @@ export default function Header({ searchString, setSearchString, movies }) {
     return (
         <div>
             <NavBar searchString={searchString} setSearchString={setSearchString} />
-            <Banner movie={movies}/>
+             <Banner movies={movies} />
         </div>
     )
 }
