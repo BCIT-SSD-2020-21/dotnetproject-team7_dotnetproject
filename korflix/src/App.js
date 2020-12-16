@@ -40,6 +40,7 @@ function App() {
     getMovieRequest(searchString);
   }, [searchString]);
 
+  // console.log(movies);
 
   return (
     <Router>

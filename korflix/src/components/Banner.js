@@ -1,13 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faPlay, faHeart } from '@fortawesome/free-solid-svg-icons'
+import axios from "../axios";
+import requests from "../requests";
 
 
 const base_url = "http://image.tmdb.org/t/p/original/";
 
 
 const Banner = (props) => {
-    // console.log(props.movies[0]);
+    const [movie, setMovie] = useState([]);
+
+    useEffect(()=>{
+        async function fetchData(){
+            const request = await axios.get(requests.allMovies);
+            const moviesData = request.data;
+            
+            const filteredMovies = moviesData.filter((m) => {
+                return m.backdrop_path != null && m.poster_path != null;
+            })
+            // console.log(filteredMovies);
+
+            const getRandomMovie = filteredMovies[Math.floor(Math.random()*filteredMovies.length)]
+
+            console.log(getRandomMovie);
+            setMovie(getRandomMovie);
+            return request;
+        }
+        fetchData()
+    },[])
 
   
 
@@ -22,14 +43,14 @@ const Banner = (props) => {
          <header className="banner"
             style={{
                 backgroundSize: "cover",
-                //backgroundImage: `url(${base_url}${movies.backdrop_path}`,
+                backgroundImage: `url(${base_url}${movie.backdrop_path}`,
                 backgroundPosition: "center center",
             }}>
             <div className="banner__contents">
-                {/* <h1 className="banner__title">
-                    {movieName}
+                <h1 className="banner__title">
+                    {movie.name}
                 </h1>
-              <h2 className="banner__desc">{truncate(movieOverview, 200)}</h2> */}
+              <h2 className="banner__desc">{truncate(movie.overview, 200)}</h2>
                 <div className="icon-menu">
                     <div className="icon-memu__stars">
                         <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
