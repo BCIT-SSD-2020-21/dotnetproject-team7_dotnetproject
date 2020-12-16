@@ -30,7 +30,7 @@ function App() {
     })
 
     if (filteredResponse) {
-      setMovies(filteredResponse);
+        setMovies(filteredResponse);
     }
 
     return filteredResponse;
