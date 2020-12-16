@@ -13,6 +13,8 @@ import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import MovieDetail from "./components/MovieDetail";
 
+
+
 // Display movies & Search filter function //
 function App() {
   const [movies, setMovies] = useState([]);
@@ -53,8 +55,8 @@ function App() {
               <div className="row">
                 <MovieList movies={movies} />
               </div>
-              <Route path="/movie/:id" component={MovieDetail} />
             </div>
+            <Route path="/movie/:id" component={MovieDetail} />
           </Route> {/* Display Movies End*/}
           <Route exact path="/login">
             <Login />
