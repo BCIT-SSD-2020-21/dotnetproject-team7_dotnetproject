@@ -80,57 +80,60 @@ class Register extends Component {
     
     render() {
         return (
-            <section className="section auth">
-                <div className="container">
-                    <h1>Register</h1>
-                    <FormErrors formerrors={this.state.errors} />
-                    <form onSubmit={this.handleSubmit}>
-                        <div className="field">
-                            <p className="control">
+            <section className="login-bg">
+            <div className="login-card">
+              <div className="login-card__container">
+                <h1 className="login-card__title">KORFLIX</h1>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="login-card__field">
+                    <div className="login-card__control">
+                      <input 
+                        className="login-card__input" 
+                        type="text"
+                        id="email"
+                        placeholder="Enter email"
+                        value={this.state.email}
+                        onChange={this.onInputChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="login-card__field">
+                    <div className="login-card__control">
+                      <input 
+                        className="login-card__input" 
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        value={this.state.password}
+                        onChange={this.onInputChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="login-card__field">
+                    <div className="login-card__control">
                                 <input
-                                    className="input"
-                                    type="email"
-                                    id="email"
-                                    placeholder="Enter email"
-                                    value={this.state.email}
-                                    onChange={this.onInputChange}
-                                />
-                            </p>
-                        </div>
-                        <div className="field">
-                            <p className="control">
-                                <input
-                                    className="input"
-                                    type="password"
-                                    id="password"
-                                    placeholder="Password"
-                                    value={this.state.password}
-                                    onChange={this.onInputChange}
-                                />
-                            </p>
-                        </div>
-                        <div className="field">
-                            <p className="control">
-                                <input
-                                    className="input"
+                                    className="login-card__input"
                                     type="password"
                                     id="confirmpassword"
                                     placeholder="Confirm password"
                                     value={this.state.confirmpassword}
                                     onChange={this.onInputChange}
                                 />
-                            </p>
+                            </div>
                         </div>
-                        <div className="field">
-                            <p className="control">
-                                <button className="button is-success">
-                                    Register
-                                </button>
-                            </p>
-                        </div>
-                    </form>
+                  <div className="login-card__field">
+                    <div className="login-card__control">
+                      <button type="submit" className="login-card__button login-card__button--success">
+                        Register
+                      </button>
+                    </div>
+                  </div>
+                </form>
                 </div>
+              </div>
+           
             </section>
+                    
         );
     }
 }

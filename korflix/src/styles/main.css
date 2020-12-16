@@ -291,4 +291,122 @@ li {
   padding: 20px;
   text-align: center;
 }
+
+.login-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.login-card {
+  border-radius: 30px;
+  background-color: #fff;
+  min-width: 50%;
+  max-width: 70%;
+  -webkit-box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+.login-card__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  padding: 5%;
+}
+
+.login-card__title {
+  font-family: "Days One", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .login-card__title {
+    font-family: "Days One", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.login-card__text {
+  min-width: 180px;
+}
+
+.login-card__link {
+  color: rgba(0, 10, 255, 0.5);
+}
+
+.login-card__link:hover {
+  color: #f0f0f0;
+}
+
+.login-card__field {
+  margin-bottom: 1rem;
+}
+
+.login-card__control {
+  width: 100%;
+}
+
+.login-card__input {
+  width: 320px;
+  border-radius: 5px;
+  border-color: #323232;
+  padding: 10px 8px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.login-card__button {
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(0, 10, 255, 0.5);
+  color: #fff;
+  border-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .login-card__button {
+    width: 130px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .login-card__button {
+    width: 188px;
+    height: 58px;
+  }
+}
+
+.login-card__button:hover,
+.login-card__button :active {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: rgba(0, 10, 255, 0.8);
+}
 /*# sourceMappingURL=main.css.map */

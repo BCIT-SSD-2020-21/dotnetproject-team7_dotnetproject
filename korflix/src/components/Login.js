@@ -1,41 +1,6 @@
-// import React from 'react'
-// import {Link} from "react-router-dom";
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import { faEye } from '@fortawesome/free-solid-svg-icons'
-
-// export default function Login() {
-//     return (
-//         <div className="login-wrapper">
-//           <h3 className="login__title">
-//             KORFLIX
-//           </h3>
-//           <div className="login__form">
-//             <div className="login__input-field">
-//               <input type="text" placeholder="Email" className="login__input"/>
-//             </div>
-//             <div className="login__input-field">
-//               <input type="password" placeholder="Password" className="login__input"/>
-//               <FontAwesomeIcon clasName="login__input-icon" icon={faEye}/>
-//             </div>
-//           </div>
-//           <div className="login__input-field">
-//           <Link to="/recover">
-//             <span>Forget password?</span>
-//           </Link>
-//           </div>
-//           <div className="login__btn">
-//             <button>Login</button>
-//           </div>
-//           <div className="login__input-field">
-//             <span>Don't have an account? </span>
-//             <Link to="/register">
-//              Sign up here
-//             </Link>
-//           </div>
-//         </div>
-//     )
-// }
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 class Login extends Component {
   state = {
@@ -48,8 +13,7 @@ class Login extends Component {
     event.preventDefault();
 
     //Form validation
-    
-    //Integrate Auth here on valid form submission
+
     //Integrate Auth here on valid form submission
 fetch('https://korflixapi.azurewebsites.net/Auth/Login', {
   method: 'POST',
@@ -91,42 +55,47 @@ fetch('https://korflixapi.azurewebsites.net/Auth/Login', {
 
   render() {
     return (
-      <section className="section auth">
-        <div className="container">
-          <h1>Log in</h1>
+    <section className="login-bg">
+      <div className="login-card">
+        <div className="login-card__container">
+          <h1 className="login-card__title">KORFLIX</h1>
           <form onSubmit={this.handleSubmit}>
-            <div className="field">
-              <p className="control">
+            <div className="login-card__field">
+              <div className="login-card__control">
                 <input 
-                  className="input" 
+                  className="login-card__input" 
                   type="text"
                   id="email"
                   placeholder="Enter email"
                   value={this.state.email}
                   onChange={this.onInputChange}
                 />
-              </p>
+              </div>
             </div>
-            <div className="field">
-              <p className="control">
+            <div className="login-card__field">
+              <div className="login-card__control">
                 <input 
-                  className="input" 
+                  className="login-card__input" 
                   type="password"
                   id="password"
                   placeholder="Password"
                   value={this.state.password}
                   onChange={this.onInputChange}
                 />
-              </p>
+              </div>
             </div>
-            <div className="field">
-              <p className="control">
-                <button className="button is-success">
+            <div className="login-card__field">
+              <p className="login-card__text">Don't have an account? <Link to="/register" className="login-card__link">Sign up here</Link></p>
+            </div>
+            <div className="login-card__field">
+              <div className="login-card__control">
+                <button type="submit" className="login-card__button login-card__button--success">
                   Login
                 </button>
-              </p>
+              </div>
             </div>
           </form>
+          </div>
         </div>
       </section>
     )
