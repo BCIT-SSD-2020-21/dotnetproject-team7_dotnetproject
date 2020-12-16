@@ -15,7 +15,7 @@ const MovieList = (props) => {
                     <h6>{movie.name}</h6>
                 </div>
 
-                <Link key={movie.id} to={"/movie/" + movie.id}>
+                <Link key={movie.id} to={`/movies/${movie.id}`}>
                     <button type="button" className="btn btn-dark py-2 btn-block">See Details</button>
                 </Link>
             </div>)

@@ -30,7 +30,7 @@ function App() {
     })
 
     if (filteredResponse) {
-        setMovies(filteredResponse);
+      setMovies(filteredResponse);
     }
 
     return filteredResponse;
@@ -56,7 +56,9 @@ function App() {
                 <MovieList movies={movies} />
               </div>
             </div>
-            <Route path="/movie/:id" component={MovieDetail} />
+            <Route exact path="/movies/:id" >
+              <MovieDetail />
+            </Route>
           </Route> {/* Display Movies End*/}
           <Route exact path="/login">
             <Login />
