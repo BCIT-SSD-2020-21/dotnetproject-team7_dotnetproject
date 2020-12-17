@@ -9,7 +9,7 @@ export default class comments extends Component {
             <div className="container mt-3">
                 <div className="row">
                     <div className="col-8">
-                        <h3 className="comments-title" style={{ marginBottom: "50px", marginTop: "30px" }} >Commnets</h3>
+                        <h3 className="comments-title" style={{ marginBottom: "50px", marginTop: "30px" }} >Comments</h3>
                         <div className="input-group">
                             <div className="input-group-append">
                                 <div className="icon-comment"><BsFillPersonFill size={40} /></div>
@@ -46,10 +46,34 @@ export default class comments extends Component {
 
 
 
-                    <div class="col-4">
-                        <h3 className="side-title" style={{ marginTop: "30px" }}>Related</h3>
+                    <div className="col-4">
+                        <h3 className="side-title" style={{ marginTop: "30px", }}>Related</h3>
 
+                        <div className="input-group" style={{ marginTop: "30px" }}>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} />
+                            <div className="sub-description">
+                                <p className="side-title" style={{ fontWeight: "800", fontSize: "20px" }}>FRONT_END</p>
+                                <p>I am still breathing</p>
+                            </div>
+                        </div>
+
+                        <div className="input-group" style={{ marginTop: "30px" }}>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} />
+                            <div className="sub-description">
+                                <p className="side-title" style={{ fontWeight: "800", fontSize: "20px" }}>FRONT_END</p>
+                                <p>I am still breathing</p>
+                            </div>
+                        </div>
+
+                        <div className="input-group" style={{ marginTop: "30px" }}>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} />
+                            <div className="sub-description">
+                                <p className="side-title" style={{ fontWeight: "800", fontSize: "20px" }}>FRONT_END</p>
+                                <p>I am still breathing</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
