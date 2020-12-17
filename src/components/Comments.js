@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BsFillPersonFill } from 'react-icons/bs'
 import { BiSubdirectoryLeft } from 'react-icons/bi'
 import { FiHeart } from 'react-icons/fi';
-
+import { InputGroup, FormControl } from 'react-bootstrap';
 export default class comments extends Component {
     render() {
         return (
@@ -10,17 +10,18 @@ export default class comments extends Component {
                 <div className="row">
                     <div className="col-8">
                         <h3 className="comments-title" style={{ marginBottom: "50px", marginTop: "30px" }} >Comments</h3>
-                        <div className="input-group">
-                            <div className="input-group-append">
-                                <div className="icon-comment"><BsFillPersonFill size={40} /></div>
-                            </div>
-                            <input className="comment-box" placeholder="Type your comments" style={{ width: "600px", marginLeft: "10px", textAlign: "center" }} />
-                            <div className="input-group-append">
-                                <button className="btn btn-custom" type="submit" style={{ backgroundColor: "#02487a", color: "white", borderTopRightRadius: "8px", borderBottomRightRadius: "8px" }}>
-                                    <BiSubdirectoryLeft size={30} />
-                                </button>
-                            </div>
-                        </div>
+                        <InputGroup className="mb-3">
+                            <InputGroup.Prepend>
+                                <InputGroup.Text id="inputGroup-sizing-default"><BsFillPersonFill size={20} /></InputGroup.Text>
+                            </InputGroup.Prepend>
+                            <FormControl
+                                aria-label="Default"
+                                aria-describedby="inputGroup-sizing-default"
+                            />
+                            <InputGroup.Prepend>
+                                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"><BiSubdirectoryLeft size={20} /></button>
+                            </InputGroup.Prepend>
+                        </InputGroup>
 
                         <div className="input-group" style={{ marginTop: "50px" }}>
                             <div className="input-group-append">
