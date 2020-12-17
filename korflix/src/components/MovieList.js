@@ -5,6 +5,7 @@ const base_url = "http://image.tmdb.org/t/p/original/";
 
 
 const MovieList = (props) => {
+    
     return (
 
         <>

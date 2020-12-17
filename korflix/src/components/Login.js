@@ -32,7 +32,7 @@ fetch('https://korflixapi.azurewebsites.net/Auth/Login', {
 .then(json => {
   console.log(JSON.stringify(json));
   // Store token with session data.
-  if(json["status"]=="OK") {
+  if(json["status"] === "OK") {
       sessionStorage.setItem('bearer-token', json["token"]);
       console.log(sessionStorage.getItem('bearer-token'))
   }

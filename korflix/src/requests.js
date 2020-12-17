@@ -1,6 +1,7 @@
 
 const requests = {
     allMovies: `/movie`,
+    submitRating: `/rating`
 
 }
 
