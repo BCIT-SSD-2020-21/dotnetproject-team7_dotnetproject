@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
-import { FiHeart } from 'react-icons/fi';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import Comments from './Comments'
-
+import React, { Component } from "react";
+import { FiHeart } from "react-icons/fi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default class MovieDetail extends Component {
     render() {
@@ -11,30 +9,73 @@ export default class MovieDetail extends Component {
             <div className="container d-flex">
                 <div className="row">
                     <div className="col detail-box mt-3">
-                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT970Z5gAb4EAdKgyUt_vz_VBRCYitUD3i0NzGlgFxbvMVaLEKv" />
+                        <img
+                            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT970Z5gAb4EAdKgyUt_vz_VBRCYitUD3i0NzGlgFxbvMVaLEKv"
+                            alt=""
+                        />
 
                         <div className="col col-md-7 title">
-                            <h3 className="detail-title"> [고블린], Guardian: The Lonely and Great God</h3>
+                            <h3 className="detail-title">
+                                {" "}
+                                [고블린], Guardian: The Lonely and Great God
+                            </h3>
                             <div>
-                                <p>release date:11/12/20 | average rating: 4.5/5</p>
+                                <p>
+                                    release date:11/12/20 | average rating:
+                                    4.5/5
+                                </p>
                                 <hr />
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                                <p>
+                                    There are many variations of passages of
+                                    Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by
+                                    injected humour, or randomised words which
+                                    don't look even slightly believable. If you
+                                    are going to use a passage of Lorem Ipsum,
+                                    you need to be sure there isn't anything
+                                    embarrassing hidden in the middle of text.
+                                    All the Lorem Ipsum generators on the
+                                    Internet tend to repeat predefined chunks as
+                                    necessary, making this the first true
+                                    generator on the Internet. It uses a
+                                    dictionary of over 200 Latin words, combined
+                                    with a handful of model sentence structures,
+                                    to generate Lorem Ipsum which looks
+                                    reasonable. The generated Lorem Ipsum is
+                                    therefore always free from repetition,
+                                    injected humour, or non-characteristic words
+                                    etc.
+                                </p>
                             </div>
 
                             <div className="detail-stars">
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-
+                                <FontAwesomeIcon
+                                    className="icon-menu__star"
+                                    icon={faStar}
+                                />
+                                <FontAwesomeIcon
+                                    className="icon-menu__star"
+                                    icon={faStar}
+                                />
+                                <FontAwesomeIcon
+                                    className="icon-menu__star"
+                                    icon={faStar}
+                                />
+                                <FontAwesomeIcon
+                                    className="icon-menu__star"
+                                    icon={faStar}
+                                />
+                                <FontAwesomeIcon
+                                    className="icon-menu__star"
+                                    icon={faStar}
+                                />
                             </div>
                         </div>
                         <FiHeart className="detail-icon" size={40} />
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
@@ -48,7 +89,6 @@ export default class MovieDetail extends Component {
 
 //                 }
 //             })
-
 
 //         }
 //         return data;
@@ -66,10 +106,9 @@ export default class MovieDetail extends Component {
 
 /////////////////////////////////////////////////////////////////
 
-    // useEffect(() => {
-    //     const fetchAPI = async => {
-    //         setDetail(await fetchMovieDetail(movie.movieId));
-    //     };
+// useEffect(() => {
+//     const fetchAPI = async => {
+//         setDetail(await fetchMovieDetail(movie.movieId));
+//     };
 
-
-    // }, [movie.movieId]);
+// }, [movie.movieId]);

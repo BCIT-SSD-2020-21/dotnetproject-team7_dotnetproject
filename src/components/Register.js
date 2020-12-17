@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import FormErrors from "./FormErrors";
 import validateForm from "./Validation";
-import Validate from "./Validation";
-// import axios from "axios";  
+// import axios from "axios";
 class Register extends Component {
     //state variables for form inputs and errors
     state = {
@@ -54,7 +52,7 @@ class Register extends Component {
                 .then(json => {
                     console.log(JSON.stringify(json));
                     // Store token with session data.
-                    if (json["status"] == "OK") {
+                    if (json["status"] === "OK") {
                         sessionStorage.setItem("bearer-token", json["token"]);
                         console.log(sessionStorage.getItem("bearer-token"));
                     } else {
@@ -77,63 +75,63 @@ class Register extends Component {
         document.getElementById(event.target.id).classList.remove("is-danger");
     };
 
-    
     render() {
         return (
             <section className="login-bg">
-            <div className="login-card">
-              <div className="login-card__container">
-                <h1 className="login-card__title">KORFLIX</h1>
-                <form onSubmit={this.handleSubmit}>
-                  <div className="login-card__field">
-                    <div className="login-card__control">
-                      <input 
-                        className="login-card__input" 
-                        type="text"
-                        id="email"
-                        placeholder="Enter email"
-                        value={this.state.email}
-                        onChange={this.onInputChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="login-card__field">
-                    <div className="login-card__control">
-                      <input 
-                        className="login-card__input" 
-                        type="password"
-                        id="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.onInputChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="login-card__field">
-                    <div className="login-card__control">
-                                <input
-                                    className="login-card__input"
-                                    type="password"
-                                    id="confirmpassword"
-                                    placeholder="Confirm password"
-                                    value={this.state.confirmpassword}
-                                    onChange={this.onInputChange}
-                                />
+                <div className="login-card">
+                    <div className="login-card__container">
+                        <h1 className="login-card__title">KORFLIX</h1>
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="login-card__field">
+                                <div className="login-card__control">
+                                    <input
+                                        className="login-card__input"
+                                        type="text"
+                                        id="email"
+                                        placeholder="Enter email"
+                                        value={this.state.email}
+                                        onChange={this.onInputChange}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                  <div className="login-card__field">
-                    <div className="login-card__control">
-                      <button type="submit" className="login-card__button login-card__button--success">
-                        Register
-                      </button>
+                            <div className="login-card__field">
+                                <div className="login-card__control">
+                                    <input
+                                        className="login-card__input"
+                                        type="password"
+                                        id="password"
+                                        placeholder="Password"
+                                        value={this.state.password}
+                                        onChange={this.onInputChange}
+                                    />
+                                </div>
+                            </div>
+                            <div className="login-card__field">
+                                <div className="login-card__control">
+                                    <input
+                                        className="login-card__input"
+                                        type="password"
+                                        id="confirmpassword"
+                                        placeholder="Confirm password"
+                                        value={this.state.confirmpassword}
+                                        onChange={this.onInputChange}
+                                    />
+                                </div>
+                            </div>
+                            <div className="login-card__field">
+                                <div className="login-card__control">
+                                    <button
+                                        type="submit"
+                                        className="login-card__button login-card__button--success"
+                                    >
+                                        Register
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                  </div>
-                </form>
                 </div>
-              </div>
-           
             </section>
-                    
         );
     }
 }
