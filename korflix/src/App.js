@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import MovieDetail from "./components/MovieDetail";
+import Comments from "./components/Comments";
 
 
 
@@ -59,8 +60,9 @@ function App() {
               </div>
             </div>
           </Route> {/* Display Movies End*/}
-          <Route exact path="/movies/:id" >
-              <MovieDetail />
+          <Route path="/movies/:id" >
+            <MovieDetail />
+            <Comments />
           </Route>
           <Route exact path="/login">
             <Login />

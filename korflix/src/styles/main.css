@@ -309,6 +309,113 @@ li {
   text-align: center;
 }
 
+.image-container .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  overflow-y: scroll;
+}
+
+.image-container .popup .content {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 25px;
+  color: blue;
+}
+
+.image-container .popup .content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.image-container .popup .content h2 span {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.image-container .popup .content .plot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px -15px 30px;
+}
+
+.image-container .popup .content .plot img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  max-width: 300px;
+  padding: 0px 15px;
+}
+
+.image-container .popup .content .plot p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 15px;
+}
+
+.image-container .popup .content .close {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  background: cadetblue;
+  color: chocolate;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.image-container .popup .content .close:hover {
+  background: cyan;
+}
+
+.detail-box {
+  background-color: #eeeeee;
+  height: 500px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.detail-box img {
+  margin: 0px 30px 0px 30px;
+  width: 350px;
+  height: 500px;
+}
+
+.detail-box .detail-title {
+  display: block;
+  margin-top: 30px;
+  font-weight: 800;
+}
+
+.detail-box .detail-icon {
+  margin-top: 10px;
+  color: red;
+}
+
+.icon-comment {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #02487a;
+  color: #02487a;
+}
+
 .login-bg {
   display: -webkit-box;
   display: -ms-flexbox;
