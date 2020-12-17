@@ -26,7 +26,7 @@ export default class comments extends Component {
                             <div className="input-group-append">
                                 <div className="icon-other"><BsFillPersonFill size={40} /></div>
                                 <h6 className="user-name" style={{ padding: "10px" }}>Crystal</h6>
-                                <h7 className="comment-date" style={{ padding: "10px" }} > 20 / 12 / 2020</h7>
+                                <span className="comment-date" style={{ padding: "10px" }} > 20 / 12 / 2020</span>
                                 <FiHeart size={20} style={{ color: "red" }} />
                             </div>
                             <p className="mock-review">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
@@ -37,7 +37,7 @@ export default class comments extends Component {
                             <div className="input-group-append">
                                 <div className="icon-other"><BsFillPersonFill size={40} /></div>
                                 <h6 className="user-name" style={{ padding: "10px" }}>Nusorn</h6>
-                                <h7 className="comment-date" style={{ padding: "10px" }} > 20 / 12 / 2020</h7>
+                                <span className="comment-date" style={{ padding: "10px" }} > 20 / 12 / 2020</span>
                                 <FiHeart size={20} style={{ color: "red" }} />
                             </div>
                             <p className="mock-review">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>

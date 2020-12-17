@@ -6,13 +6,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/main.css";
 
 import Header from "./components/Header";
-
+import Banner from "./components/Banner";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import MovieDetail from "./components/MovieDetail";
-import Comments from "./components/Comments";
+
 
 
 
@@ -38,6 +38,10 @@ function App() {
     return filteredResponse;
   };
 
+  const getMovieById = (id) => {
+    return movies.find(m=>m.movieId === id)
+  }
+
   useEffect(() => {
     getMovieRequest(searchString);
   }, [searchString]);
@@ -47,10 +51,11 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Header searchString={searchString} setSearchString={setSearchString} movies={movies} />
         <Switch>
           {/* Display Movies */}
           <Route exact path="/">
-            <Header searchString={searchString} setSearchString={setSearchString} movies={movies} />
+            <Banner />
             <div className="conatiner-fluid movie-pic">
               <div className="row">
                 <MovieListHeading heading="Movies" />
@@ -60,10 +65,7 @@ function App() {
               </div>
             </div>
           </Route> {/* Display Movies End*/}
-          <Route path="/movies/:id" >
-            <MovieDetail />
-            <Comments />
-          </Route>
+          <Route path="/movies/:id" component={MovieDetail} />
           <Route exact path="/login">
             <Login />
           </Route>
