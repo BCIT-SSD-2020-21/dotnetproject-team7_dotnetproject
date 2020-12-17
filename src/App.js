@@ -10,7 +10,6 @@ import Banner from "./components/Banner";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import MovieList from "./components/MovieList";
-import MovieListHeading from "./components/MovieListHeading";
 import MovieDetail from "./components/MovieDetail";
 
 
@@ -39,7 +38,7 @@ function App() {
   };
 
   const getMovieById = (id) => {
-    return movies.find(m=>m.movieId === id)
+    return movies.find(m => m.movieId === id)
   }
 
   useEffect(() => {
@@ -56,14 +55,7 @@ function App() {
           {/* Display Movies */}
           <Route exact path="/">
             <Banner />
-            <div className="conatiner-fluid movie-pic">
-              <div className="row">
-                <MovieListHeading heading="Movies" />
-              </div>
-              <div className="row">
-                <MovieList movies={movies} />
-              </div>
-            </div>
+            <MovieList movies={movies} />
           </Route> {/* Display Movies End*/}
           <Route path="/movies/:id" component={MovieDetail} />
           <Route exact path="/login">
