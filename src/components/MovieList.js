@@ -9,7 +9,6 @@ const MovieList = (props) => {
 
 
     return (
-
         <>
             {props.movies.map(movie => (<div key={movie.movieId} className="image-container d-flex justify-content-start m-3">
                 <Link key={movie.movieId} to={`/movies/${movie.movieId}`}>
@@ -19,10 +18,6 @@ const MovieList = (props) => {
                         <h6>{movie.name}</h6>
                     </div>
                 </Link>
-
-                {/* <Link key={movie.movieId} to={`/movies/${movie.movieId}`}>
-                    <button type="button" className="btn btn-dark py-2 btn-block">See Details</button> */}
-
             </div>)
             )}
         </>

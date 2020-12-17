@@ -1,7 +1,7 @@
 
 const requests = {
     allMovies: `/movie`,
-    submitRating: `/rating`
+    submitRating: `/rating`,
 
 }
 

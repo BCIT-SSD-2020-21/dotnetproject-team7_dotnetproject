@@ -1,76 +1,58 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiHeart } from 'react-icons/fi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import Comments from './Comments'
+import axios from "../axios";
+import Comments from "./Comments";
+
+const base_url = "http://image.tmdb.org/t/p/original/";
 
 
-export default class MovieDetail extends Component {
-    render() {
+export default function MovieDetail({match}) {
+        const id = match.params.id;
+        const [movie, setMovie] = useState([]);
+
+        useEffect(()=>{
+        async function fetchData(){
+            const request = await axios.get(`/movie/${id}`);
+            const moviesData = request.data;
+
+            setMovie(moviesData);
+            return request;
+        }
+        fetchData()
+        },[])
+
+        // console.log(movie);
+        
         return (
-            <div className="container d-flex">
-                <div className="row">
-                    <div className="col detail-box mt-3">
-                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT970Z5gAb4EAdKgyUt_vz_VBRCYitUD3i0NzGlgFxbvMVaLEKv" />
+            <>
+                <div className="container d-flex">
+                    <div className="row">
+                        <div className="col detail-box mt-3">
+                        <img src={`${base_url}${movie?.poster_path}`} alt={movie.name} />
 
-                        <div className="col col-md-7 title">
-                            <h3 className="detail-title"> [고블린], Guardian: The Lonely and Great God</h3>
-                            <div>
-                                <p>release date:11/12/20 | average rating: 4.5/5</p>
-                                <hr />
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                            <div className="col col-md-7 title">
+                                <h3 className="detail-title">{movie.name}</h3>
+                                <div>
+                                    <p>Release Date: {movie.first_air_date} | Average Rating: {movie?.tmdB_average || movie?.korlfix_average}/5</p>
+                                    <hr />
+                                    <p>{movie.overview}</p>
+                                </div>
+                                <div className="detail-stars">
+                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+
+                                </div>
                             </div>
-
-                            <div className="detail-stars">
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-
-                            </div>
+                            <FiHeart className="detail-icon" size={40} />
                         </div>
-                        <FiHeart className="detail-icon" size={40} />
                     </div>
                 </div>
-            </div>
+                <Comments />
+            </>
         )
-    }
 }
-
-// const MovieDetail = ({ match }) => {
-//     console.log(match);
-
-//     const fetchMovieDetail = async (movieId) => {
-//         try {
-//             const { data } = await axios.get(`/moive/${movieId}`, {
-//                 params: {
-
-//                 }
-//             })
-
-
-//         }
-//         return data;
-//     }
-
-//         catch (err) { }
-
-// }
-// return (
-//     <div>whyyyyyyyy</div>
-// )
-// }
-
-// export default MovieDetail
-
-/////////////////////////////////////////////////////////////////
-
-    // useEffect(() => {
-    //     const fetchAPI = async => {
-    //         setDetail(await fetchMovieDetail(movie.movieId));
-    //     };
-
-
-    // }, [movie.movieId]);
-
