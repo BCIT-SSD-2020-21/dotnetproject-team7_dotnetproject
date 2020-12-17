@@ -73,3 +73,4 @@ export default class MovieDetail extends Component {
 
 
     // }, [movie.movieId]);
+

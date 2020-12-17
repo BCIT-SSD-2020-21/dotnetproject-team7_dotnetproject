@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 // Styles //
@@ -13,6 +13,7 @@ import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import MovieDetail from "./components/MovieDetail";
 import Comments from "./components/Comments";
+
 
 
 
@@ -59,12 +60,10 @@ function App() {
               </div>
             </div>
           </Route> {/* Display Movies End*/}
-
           <Route path="/movies/:id" >
             <MovieDetail />
             <Comments />
           </Route>
-
           <Route exact path="/login">
             <Login />
           </Route>

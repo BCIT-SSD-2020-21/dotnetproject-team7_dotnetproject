@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FormErrors from "./FormErrors";
 import validateForm from "./Validation";
 import Validate from "./Validation";
-// import axios from "axios";  
+ 
 class Register extends Component {
     //state variables for form inputs and errors
     state = {
@@ -54,7 +54,7 @@ class Register extends Component {
                 .then(json => {
                     console.log(JSON.stringify(json));
                     // Store token with session data.
-                    if (json["status"] == "OK") {
+                    if (json["status"] === "OK") {
                         sessionStorage.setItem("bearer-token", json["token"]);
                         console.log(sessionStorage.getItem("bearer-token"));
                     } else {
