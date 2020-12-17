@@ -387,9 +387,9 @@ li {
 .detail-box {
   background-color: #eeeeee;
   height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .detail-box img {
@@ -399,6 +399,7 @@ li {
 }
 
 .detail-box .detail-title {
+  display: block;
   margin-top: 30px;
   font-weight: 800;
 }
@@ -406,6 +407,13 @@ li {
 .detail-box .detail-icon {
   margin-top: 10px;
   color: red;
+}
+
+.icon-comment {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #02487a;
+  color: #02487a;
 }
 
 .login-bg {

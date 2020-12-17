@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FiHeart } from 'react-icons/fi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import Comments from './Comments'
 
 
 export default class MovieDetail extends Component {
@@ -32,9 +33,7 @@ export default class MovieDetail extends Component {
                         <FiHeart className="detail-icon" size={40} />
                     </div>
                 </div>
-
             </div>
-
         )
     }
 }

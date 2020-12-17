@@ -1,0 +1,59 @@
+import React, { Component } from 'react'
+import { BsFillPersonFill } from 'react-icons/bs'
+import { BiSubdirectoryLeft } from 'react-icons/bi'
+import { FiHeart } from 'react-icons/fi';
+
+export default class comments extends Component {
+    render() {
+        return (
+            <div className="container mt-3">
+                <div className="row">
+                    <div className="col-8">
+                        <h3 className="comments-title" style={{ marginBottom: "50px", marginTop: "30px" }} >Commnets</h3>
+                        <div className="input-group">
+                            <div className="input-group-append">
+                                <div className="icon-comment"><BsFillPersonFill size={40} /></div>
+                            </div>
+                            <input className="comment-box" placeholder="Type your comments" style={{ width: "600px", marginLeft: "10px", textAlign: "center" }} />
+                            <div className="input-group-append">
+                                <button className="btn btn-custom" type="submit" style={{ backgroundColor: "#02487a", color: "white", borderTopRightRadius: "8px", borderBottomRightRadius: "8px" }}>
+                                    <BiSubdirectoryLeft size={30} />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="input-group" style={{ marginTop: "50px" }}>
+                            <div className="input-group-append">
+                                <div className="icon-other"><BsFillPersonFill size={40} /></div>
+                                <h6 className="user-name" style={{ padding: "10px" }}>Crystal</h6>
+                                <h7 className="comment-date" style={{ padding: "10px" }} > 20 / 12 / 2020</h7>
+                                <FiHeart size={20} style={{ color: "red" }} />
+                            </div>
+                            <p className="mock-review">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                        </div>
+
+
+                        <div className="input-group" style={{ marginTop: "50px" }}>
+                            <div className="input-group-append">
+                                <div className="icon-other"><BsFillPersonFill size={40} /></div>
+                                <h6 className="user-name" style={{ padding: "10px" }}>Nusorn</h6>
+                                <h7 className="comment-date" style={{ padding: "10px" }} > 20 / 12 / 2020</h7>
+                                <FiHeart size={20} style={{ color: "red" }} />
+                            </div>
+                            <p className="mock-review">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-4">
+                        <h3 className="side-title" style={{ marginTop: "30px" }}>Related</h3>
+
+                    </div>
+                </div>
+
+            </div>
+
+        )
+    }
+}
