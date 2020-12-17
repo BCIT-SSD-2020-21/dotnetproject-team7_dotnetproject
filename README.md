@@ -12,9 +12,10 @@ Korflix is the go-to resource for K drama fans. Users -- predominantly people wh
 
 ### Installation Instructions
 
-_PENDING_
-Instruction for if you were to sign over the repo to an other development team, what steps would need to be taken to test the app locally. Ex. Names of Environment Variables/User Secrets, list of third party accounts that require membership, tools/scripts/commands that need to be run, etc.
-.env sample (replace our API key with theirs)
+The app can be run locally on your machine to test functionality and changes before they are deployed. Once the backend is running in Visual Studio, the frontend will be able to receive data from it. Optionally, the backend can be deployed to Azure and the frontend via Netlify. Please refer to the [backend repository](https://github.com/BCIT-SSD-2020-21/dotnetproject-team7_dotnetproject_backend/) for instructions on how to work with the backend.
+
+You will require an API key for querying the TMDB database. Please apply for one following the instructions at this URL:
+https://www.themoviedb.org/documentation/api
 
 ### Requirements
 
@@ -63,17 +64,14 @@ Instruction for if you were to sign over the repo to an other development team, 
 -   Preview videos / trailers
 -   Expose API to external developers
 
-### Prototypes
+### Prototype
 
-_PENDING_
-A prototype (or prototypes) that mock out the layout and flow of each of your app features. Start with "must have" and if your team gets to "nice to have" then you can add/update the prototype(s) on a case by case basis.
+![](https://i.imgur.com/XSzibOl.jpg)
 
 ### ERD
 
 ![](https://i.imgur.com/gzF192B.png)
 
-### Prototype
-![](https://i.imgur.com/XSzibOl.jpg)
 
 
 
