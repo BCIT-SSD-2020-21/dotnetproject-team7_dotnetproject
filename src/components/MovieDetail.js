@@ -8,12 +8,12 @@ import Comments from "./Comments";
 const base_url = "http://image.tmdb.org/t/p/original/";
 
 
-export default function MovieDetail({match}) {
-        const id = match.params.id;
-        const [movie, setMovie] = useState([]);
+export default function MovieDetail({ match }) {
+    const id = match.params.id;
+    const [movie, setMovie] = useState([]);
 
-        useEffect(()=>{
-        async function fetchData(){
+    useEffect(() => {
+        async function fetchData() {
             const request = await axios.get(`/movie/${id}`);
             const moviesData = request.data;
 
@@ -21,38 +21,40 @@ export default function MovieDetail({match}) {
             return request;
         }
         fetchData()
-        },[])
+    }, [])
 
-        // console.log(movie);
-        
-        return (
-            <>
-                <div className="container d-flex">
-                    <div className="row">
-                        <div className="col detail-box mt-3">
+    // console.log(movie);
+
+    return (
+        <>
+            <div className="container d-flex">
+                <div className="row">
+                    <div className="col detail-box mt-3">
                         <img src={`${base_url}${movie?.poster_path}`} alt={movie.name} />
 
-                            <div className="col col-md-7 title">
-                                <h3 className="detail-title">{movie.name}</h3>
-                                <div>
-                                    <p>Release Date: {movie.first_air_date} | Average Rating: {movie?.tmdB_average || movie?.korlfix_average}/5</p>
-                                    <hr />
-                                    <p>{movie.overview}</p>
-                                </div>
-                                <div className="detail-stars">
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-
-                                </div>
+                        <div className="col-md-7 title">
+                            <h3 className="detail-title">{movie.name}</h3>
+                            <div className="detail-description">
+                                <p className="detail-date" >Release Date: {movie.first_air_date}</p>
+                                <p className="detail-rate"> Average Rating: {movie?.tmdB_average || movie?.korlfix_average}/5</p>
+                                <hr />
+                                <p className="detail-overview">{movie.overview}</p>
                             </div>
-                            <FiHeart className="detail-icon" size={40} />
+                            <div className="detail-stars">
+                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+                                <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
+
+                            </div>
                         </div>
+                        <FiHeart className="detail-icon" size={40} />
+
                     </div>
                 </div>
-                <Comments />
-            </>
-        )
+            </div>
+            <Comments />
+        </>
+    )
 }
