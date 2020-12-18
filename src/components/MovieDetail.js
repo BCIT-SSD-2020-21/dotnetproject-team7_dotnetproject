@@ -25,23 +25,22 @@ const MovieDetail = ({ match }) => {
             return request;
         }
         fetchData()
+        },[id])
+
+        const postRating = (rating) =>{
+            fetch(`https://korflixapi.azurewebsites.net/rating`, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    movieId: id,
+                    userId: sessionStorage.getItem("userId"),
+                    rating: rating,
+                })
+              })
     }, [id])
-
-    const postRating = (rating) => {
-        fetch('https://korflixapi.azurewebsites.net/rating', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                movieId: id,
-                userId: sessionStorage.getItem("userId"),
-                rating: rating,
-            })
-        })
-
-    }
 
     const submitRating = (rating) => {
         var isAuth = !!sessionStorage.getItem("bearer-token")
