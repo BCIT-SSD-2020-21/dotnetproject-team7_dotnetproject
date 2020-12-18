@@ -40,7 +40,7 @@ const MovieDetail = ({ match }) => {
                     rating: rating,
                 })
               })
-    }, [id])
+    }
 
     const submitRating = (rating) => {
         var isAuth = !!sessionStorage.getItem("bearer-token")
