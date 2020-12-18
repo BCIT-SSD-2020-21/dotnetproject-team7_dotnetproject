@@ -38,9 +38,6 @@ function App() {
     return filteredResponse;
   };
 
-  const getMovieById = (id) => {
-    return movies.find(m => m.movieId === id)
-  }
 
   useEffect(() => {
     getMovieRequest(searchString);

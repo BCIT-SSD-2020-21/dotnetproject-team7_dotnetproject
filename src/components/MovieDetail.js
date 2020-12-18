@@ -25,7 +25,7 @@ const MovieDetail = ({ match }) => {
             return request;
         }
         fetchData()
-    }, [])
+    }, [id])
 
     const postRating = (rating) => {
         fetch('https://korflixapi.azurewebsites.net/rating', {
@@ -77,8 +77,8 @@ const MovieDetail = ({ match }) => {
                     </div>
 
                 </div>
+                <Comments />
             </div>
-            <Comments />
         </>
     )
 }
