@@ -59,9 +59,7 @@ function App() {
             <MovieList movies={movies} />
           </Route> {/* Display Movies End*/}
           <Route path="/movies/:id" component={MovieDetail} />
-          <Route exact path="/login">
-            <Login />
-          </Route>
+          <Route exact path="/login" component={Login} />
           <Route exact path="/register">
             <Register />
           </Route>
