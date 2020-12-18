@@ -77,8 +77,9 @@ const MovieDetail = ({ match }) => {
                     </div>
 
                 </div>
-                <Comments />
+
             </div>
+            <Comments />
         </>
     )
 }
