@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Login extends Component {
@@ -34,7 +34,7 @@ fetch('https://korflixapi.azurewebsites.net/Auth/Login', {
   // Store token with session data.
   if(json["status"] === "OK") {
       sessionStorage.setItem('bearer-token', json["token"]);
-      console.log(sessionStorage.getItem('bearer-token'))
+
   }
   else {
       // error message handling

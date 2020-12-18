@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import FormErrors from "./FormErrors";
 import validateForm from "./Validation";
-import Validate from "./Validation";
+
  
 class Register extends Component {
     //state variables for form inputs and errors

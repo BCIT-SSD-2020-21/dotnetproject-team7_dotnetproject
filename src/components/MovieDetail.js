@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { FiHeart } from 'react-icons/fi';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import ReactStars from "react-stars";
 import axios from "../axios";
 import Comments from "./Comments";
+import { useHistory } from 'react-router-dom';
 
 const base_url = "http://image.tmdb.org/t/p/original/";
 
 
-export default function MovieDetail({match}) {
+const MovieDetail = ({match}) => {
+        const history = useHistory();
+
         const id = match.params.id;
         const [movie, setMovie] = useState([]);
 
@@ -23,7 +25,31 @@ export default function MovieDetail({match}) {
         fetchData()
         },[])
 
-        // console.log(movie);
+        const postRating = (rating) =>{
+            fetch('https://korflixapi.azurewebsites.net/rating', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    movieId: id,
+                    userId: sessionStorage.getItem("userId"),
+                    rating: rating,
+                })
+              })
+
+        }
+
+        const submitRating = (rating) => {
+            var isAuth = !!sessionStorage.getItem("bearer-token")
+            // console.log(token)
+            if (!isAuth){
+               history.push("/login")
+            }else{
+                postRating(rating);
+            }
+        }
         
         return (
             <>
@@ -39,14 +65,20 @@ export default function MovieDetail({match}) {
                                     <hr />
                                     <p>{movie.overview}</p>
                                 </div>
-                                <div className="detail-stars">
+                                <ReactStars 
+                                count={5}
+                                onChange={submitRating}
+                                size={24}
+                                color2={'#ffd700'} />
+                                
+                                {/* <div className="detail-stars">
                                     <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
                                     <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
                                     <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
                                     <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
                                     <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
 
-                                </div>
+                                </div> */}
                             </div>
                             <FiHeart className="detail-icon" size={40} />
                         </div>
@@ -56,3 +88,5 @@ export default function MovieDetail({match}) {
             </>
         )
 }
+
+export default MovieDetail;
