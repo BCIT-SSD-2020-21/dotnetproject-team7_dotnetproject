@@ -8,7 +8,7 @@ export default class comments extends Component {
         return (
             <div className="container mt-3">
                 <div className="row">
-                    <div className="col-8">
+                    <div className="col-md-8">
                         <h3 className="comments-title" style={{ marginBottom: "50px", marginTop: "30px" }} >Comments</h3>
                         <InputGroup className="mb-3">
                             <InputGroup.Prepend>

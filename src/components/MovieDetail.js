@@ -38,7 +38,7 @@ export default function MovieDetail({ match }) {
                                 <p className="detail-date" >Release Date: {movie.first_air_date}</p>
                                 <p className="detail-rate"> Average Rating: {movie?.tmdB_average || movie?.korlfix_average}/5</p>
                                 <hr />
-                                <p>{movie.overview}</p>
+                                <p className="detail-overview">{movie.overview}</p>
                             </div>
                             <div className="detail-stars">
                                 <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
@@ -50,6 +50,7 @@ export default function MovieDetail({ match }) {
                             </div>
                         </div>
                         <FiHeart className="detail-icon" size={40} />
+
                     </div>
                 </div>
             </div>

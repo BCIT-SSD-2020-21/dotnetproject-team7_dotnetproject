@@ -426,13 +426,16 @@ li {
   }
 }
 
-.detail-box .detail-description {
+.detail-box .detail-overview {
   font-size: 15px;
   text-align: justify;
+  text-overflow: ellipsis;
+  overflow-x: scroll;
+  max-height: 210px;
 }
 
 @media (min-width: 768px) {
-  .detail-box .detail-description {
+  .detail-box .detail-overview {
     font-size: 20px;
   }
 }
