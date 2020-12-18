@@ -8,14 +8,16 @@ import { useHistory } from 'react-router-dom';
 const base_url = "http://image.tmdb.org/t/p/original/";
 
 
+
 const MovieDetail = ({match}) => {
         const history = useHistory();
 
         const id = match.params.id;
         const [movie, setMovie] = useState([]);
 
-        useEffect(()=>{
-        async function fetchData(){
+
+    useEffect(() => {
+        async function fetchData() {
             const request = await axios.get(`/movie/${id}`);
             const moviesData = request.data;
 
@@ -70,23 +72,16 @@ const MovieDetail = ({match}) => {
                                 onChange={submitRating}
                                 size={24}
                                 color2={'#ffd700'} />
-                                
-                                {/* <div className="detail-stars">
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-                                    <FontAwesomeIcon className="icon-menu__star" icon={faStar} />
-
-                                </div> */}
                             </div>
-                            <FiHeart className="detail-icon" size={40} />
                         </div>
+                        <FiHeart className="detail-icon" size={40} />
+
                     </div>
                 </div>
-                <Comments />
-            </>
-        )
+            </div>
+            <Comments />
+        </>
+    )
 }
 
 export default MovieDetail;
