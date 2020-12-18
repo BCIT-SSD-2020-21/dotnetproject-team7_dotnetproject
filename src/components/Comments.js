@@ -19,7 +19,7 @@ export default class comments extends Component {
                                 aria-describedby="inputGroup-sizing-default"
                             />
                             <InputGroup.Prepend>
-                                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"><BiSubdirectoryLeft size={20} /></button>
+                                <button className="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"><BiSubdirectoryLeft size={20} /></button>
                             </InputGroup.Prepend>
                         </InputGroup>
 
@@ -51,7 +51,7 @@ export default class comments extends Component {
                         <h3 className="side-title" style={{ marginTop: "30px", }}>Related</h3>
 
                         <div className="input-group" style={{ marginTop: "30px" }}>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} alt=""/>
                             <div className="sub-description">
                                 <p className="side-title" style={{ fontWeight: "800", fontSize: "20px" }}>FRONT_END</p>
                                 <p>I am still breathing</p>
@@ -59,7 +59,7 @@ export default class comments extends Component {
                         </div>
 
                         <div className="input-group" style={{ marginTop: "30px" }}>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} alt="" />
                             <div className="sub-description">
                                 <p className="side-title" style={{ fontWeight: "800", fontSize: "20px" }}>FRONT_END</p>
                                 <p>I am still breathing</p>
@@ -67,7 +67,7 @@ export default class comments extends Component {
                         </div>
 
                         <div className="input-group" style={{ marginTop: "30px" }}>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BV3VpybFRoOdzVLPjn49I7i51Y13t8UnGA&usqp=CAU" width="200px" style={{ paddingRight: "10px" }} alt=""/>
                             <div className="sub-description">
                                 <p className="side-title" style={{ fontWeight: "800", fontSize: "20px" }}>FRONT_END</p>
                                 <p>I am still breathing</p>
