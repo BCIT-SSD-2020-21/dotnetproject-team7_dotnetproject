@@ -25,7 +25,7 @@ const MovieDetail = ({match}) => {
             return request;
         }
         fetchData()
-        },[])
+        },[id])
 
         const postRating = (rating) =>{
             fetch('https://korflixapi.azurewebsites.net/rating', {
@@ -59,7 +59,6 @@ const MovieDetail = ({match}) => {
                     <div className="row">
                         <div className="col detail-box mt-3">
                         <img src={`${base_url}${movie?.poster_path}`} alt={movie.name} />
-
                             <div className="col col-md-7 title">
                                 <h3 className="detail-title">{movie.name}</h3>
                                 <div>
@@ -75,10 +74,8 @@ const MovieDetail = ({match}) => {
                             </div>
                         </div>
                         <FiHeart className="detail-icon" size={40} />
-
                     </div>
                 </div>
-            </div>
             <Comments />
         </>
     )
