@@ -65,7 +65,7 @@ const MovieDetail = ({ match }) => {
                             <div>
                                 <p>Release Date: {movie.first_air_date} | Average Rating: {movie?.tmdB_average || movie?.korlfix_average}/5</p>
                                 <hr />
-                                <p>{movie.overview}</p>
+                                <p className="detail-overview">{movie.overview}</p>
                             </div>
                             <ReactStars
                                 count={5}
