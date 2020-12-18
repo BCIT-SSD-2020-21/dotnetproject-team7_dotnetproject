@@ -73,8 +73,8 @@ const MovieDetail = ({ match }) => {
                                 size={24}
                                 color2={'#ffd700'} />
                         </div>
+                        <FiHeart className="detail-icon" size={40} />
                     </div>
-                    <FiHeart className="detail-icon" size={40} />
 
                 </div>
             </div>
