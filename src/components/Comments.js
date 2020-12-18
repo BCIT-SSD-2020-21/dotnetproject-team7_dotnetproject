@@ -47,7 +47,7 @@ export default class comments extends Component {
 
 
 
-                    <div className="col-4">
+                    <div className="col-4 ">
                         <h3 className="side-title" style={{ marginTop: "30px", }}>Related</h3>
 
                         <div className="input-group" style={{ marginTop: "30px" }}>

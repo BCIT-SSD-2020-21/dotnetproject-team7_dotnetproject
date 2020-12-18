@@ -30,8 +30,9 @@ function App() {
       return m.backdrop_path != null && m.poster_path != null;
     })
 
-    if (filteredResponse) {
-      setMovies(filteredResponse);
+
+    if (filteredResponse.slice(0, 20)) {
+      setMovies(filteredResponse.slice(0, 20));
     }
 
     return filteredResponse;
