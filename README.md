@@ -1,7 +1,7 @@
 # dotnetproject-team7_dotnetproject
 
 ## Deployment to Netlify
-[distracted-lumiere-9c3827.netlify.app](https://distracted-lumiere-9c3827.netlify.app/)
+[https://peaceful-visvesvaraya-addbcc.netlify.app/](https://peaceful-visvesvaraya-addbcc.netlify.app/)
 ## Work-in-progress-readme
 
 ## Requirements for documentation (taken from Phil's repo)
