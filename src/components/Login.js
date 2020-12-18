@@ -31,10 +31,10 @@ fetch('https://korflixapi.azurewebsites.net/Auth/Login', {
 // Data retrieved.
 .then(json => {
   console.log(JSON.stringify(json));
-  // Store token with session data.
+  // Store token and userId with session data.
   if(json["status"] === "OK") {
       sessionStorage.setItem('bearer-token', json["token"]);
-
+      sessionStorage.setItem('userId', json["userId"]);
   }
   else {
       // error message handling

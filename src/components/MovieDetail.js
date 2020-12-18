@@ -28,7 +28,7 @@ const MovieDetail = ({match}) => {
         },[id])
 
         const postRating = (rating) =>{
-            fetch('https://korflixapi.azurewebsites.net/rating', {
+            fetch(`https://korflixapi.azurewebsites.net/rating`, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
