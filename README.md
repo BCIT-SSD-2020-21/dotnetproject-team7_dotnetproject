@@ -2,9 +2,6 @@
 
 ## Deployment to Netlify
 [https://peaceful-visvesvaraya-addbcc.netlify.app/](https://peaceful-visvesvaraya-addbcc.netlify.app/)
-## Work-in-progress-readme
-
-## Requirements for documentation (taken from Phil's repo)
 
 ### App Description
 
